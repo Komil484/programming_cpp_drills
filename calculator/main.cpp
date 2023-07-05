@@ -272,6 +272,10 @@ int main()
 {
     double val = 0;
     Token t;
+
+    set_var_value("pi", 3.1415926535);
+    set_var_value("e", 2.7182818284);
+
     while (cin) {
         try {
             cout << prompt;
