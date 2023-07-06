@@ -138,7 +138,7 @@ void Token_stream::ignore_until(char ignore_ch)
 
 Token_stream ts;
 
-map<string, int> var_map;
+map<string, double> var_map;
 
 double expression();
 
