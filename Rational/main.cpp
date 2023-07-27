@@ -50,20 +50,16 @@ int GCF(int a, int b) // Euclid's GCF algorithm
 
 ostream& operator<<(ostream& os, const Rational& r)
 {
-    cout << r.numerator() << "/" << r.denominator();
+    os << r.numerator() << "/" << r.denominator();
     return os;
-}
-
-int main()
-{
-    return 0;
 }
 
 Rational::Rational() : Rational(0, 1) {}
 
 Rational::Rational(int numerator) : Rational(numerator, 1) {}
 
-Rational::Rational(int numerator, int denominator) : m_numerator(numerator),
+Rational::Rational(int numerator, int denominator):
+    m_numerator(numerator),
     m_denominator(denominator)
 {
     if (denominator == 0) throw Invalid();
@@ -129,3 +125,10 @@ bool Rational::operator==(const Rational &rhs)
 }
 
 Rational::operator double() const { return static_cast<double>(m_numerator) / m_denominator; }
+
+
+
+int main()
+{
+    return 0;
+}
